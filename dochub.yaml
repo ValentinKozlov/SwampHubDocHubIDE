@@ -1,3 +1,4 @@
 imports:
+  - github:DocHubTeam/ceaf-app:master@dochub.yaml
   - github:ValentinKozlov/DocHubExampleMetamodel:dochub_ide@dochub.yaml
   - github:ValentinKozlov/DocHubExampleManifest:dochub_ide@dochub.yaml
