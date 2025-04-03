@@ -1,0 +1,6 @@
+[submodule "DocHubExampleMetamodel"]
+	path = DocHubExampleMetamodel
+	url = https://github.com/ValentinKozlov/DocHubExampleMetamodel.git
+[submodule "DocHubExampleManifest"]
+	path = DocHubExampleManifest
+	url = https://github.com/ValentinKozlov/DocHubExampleManifest.git
