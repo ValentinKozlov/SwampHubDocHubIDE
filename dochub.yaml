@@ -1,8 +1,2 @@
-imports: # - github:ValentinKozlov/DocHubExampleMetamodel:dochub_ide@dochub.yaml
-docs:
-  doc1743844050939:
-    type: vscode
-    extension: drawio
-    source: auto-1743844050816-1716.drawio
-    location: /Тестовый документ drow.io
-    title: Тестовый документ drow.io
+imports:
+# - github:ValentinKozlov/DocHubExampleMetamodel:dochub_ide@dochub.yaml
