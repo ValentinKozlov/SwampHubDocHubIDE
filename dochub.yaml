@@ -2,5 +2,24 @@ $package:
   github-ValentinKozlov-SwampHubDocHubIDE:
     name: github-ValentinKozlov-SwampHubDocHubIDE
     version: 1.0.0
-imports:  
+imports:
   - https://alpha.dochub.info/archcode/_metamodel_/ceaf-app/dochub.yaml
+  - doc_test_openapi.yaml
+
+docs:
+  doc1744530648394:
+    type: vscode
+    extension: drawio
+    source: auto-1744530648341-6662.drawio
+    location: /Документы/Пример draw.io
+    title: Пример draw.io
+  doc1744532228876:
+    type: openapi
+    source: auto-1744532228849-806.yaml
+    location: /Документы/Пример OpenAPI
+    title: Пример OpenAPI описание
+  doc1744534290024:
+    type: bpmnjs
+    source: auto-1744534289972-3891.bpmn
+    location: /Документы/Пример BPMN
+    title: Пример BPMN
