@@ -1,2 +1,6 @@
-imports:
-# - github:ValentinKozlov/DocHubExampleMetamodel:dochub_ide@dochub.yaml
+$package:
+  github-ValentinKozlov-SwampHubDocHubIDE:
+    name: github-ValentinKozlov-SwampHubDocHubIDE
+    version: 1.0.0
+imports:  
+  - https://alpha.dochub.info/archcode/_metamodel_/ceaf-app/dochub.yaml
