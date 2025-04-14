@@ -1,3 +1,4 @@
+docs:
   test_OpenAPI:
     type: openapi
     source: test_openapi.yaml

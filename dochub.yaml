@@ -23,3 +23,7 @@ docs:
     source: auto-1744534289972-3891.bpmn
     location: /Документы/Пример BPMN
     title: Пример BPMN
+  dochub.welcome:
+    type: markdown
+    location: /Главная страница
+    source: main_page.md
