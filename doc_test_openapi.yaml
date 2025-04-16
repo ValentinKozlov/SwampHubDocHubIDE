@@ -1,6 +1,0 @@
-docs:
-  test_OpenAPI:
-    type: openapi
-    source: test_openapi.yaml
-    location: /Документы/Пример OpenAPI ручной
-    title: Пример OpenAPI описание вручную
