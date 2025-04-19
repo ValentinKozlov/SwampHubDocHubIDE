@@ -1,0 +1,11 @@
+docs:
+  doc1745059036581:
+    type: bpmnjs
+    source: my_content/auto-1745059036534-3287.bpmn
+    location: /Документы/Test BPMN
+    title: Test BPMN
+  doc1745059314548:
+    type: drawio
+    source: my_content/auto-1745059314524-2452.drawio
+    location: /Документы/test draw.io
+    title: test draw.io

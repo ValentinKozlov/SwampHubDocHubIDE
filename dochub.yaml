@@ -8,3 +8,22 @@ imports:
   # The default metamodel CEAF is included here. You can completely replace it with your own.
   # Здесь подключается метамодель CEAF по умолчанию. Вы можете полностью заменить ее своей.
   - https://alpha.dochub.info/archcode/_metamodel_/ceaf-app/dochub.yaml
+  - my_code.yaml
+  - rules.yaml
+
+$repo: 
+  generation: 
+    docs: 
+      code: "my_code.yaml"
+      content: "my_content"
+
+# docs:
+#   # Декларация стартового документа с системным идентификатором
+#   dochub.welcome:
+#     type: markdown
+#     location: /Главная страница
+#     source: main_page.md
+
+
+
+
