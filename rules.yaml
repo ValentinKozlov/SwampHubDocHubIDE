@@ -7,8 +7,9 @@ rules:
       description: "Проверка welcome page"      
       source: >
         (
+            debugger;
             $matcher := /dochub.welcome/; /*Задаем параметр фильтрации запроса*/
-            $count($.docs.$sift(function($v, $k) {$k ~> $matcher}).$spread().{"count": 1}) != 1
+            $test1 := $count($.docs.$sift(function($v, $k) {$k ~> $matcher}).$spread().{"count": 1}) != 1
             ? {
               "uid": "$dh-mm-nfwp",
               "title": "Не найден документа главной страницы",
@@ -16,15 +17,5 @@ rules:
               "correction": "Подключите свою главную страницу в соответствии с инструкцией описанной при входе",
               "location": "@document/dochub.welcome",
               "path": "/docs/dochub.welcome"            
-            };
-
-            {
-              "uid": "$dh-mm-nfwp",
-              "title": "Не найден документа главной страницы",
-              "description": "Не найден документа главной страницы",
-              "correction": "Подключите свою главную страницу в соответствии с инструкцией описанной при входе",
-              "location": "@document/dochub.welcome",
-              "path": "/docs/dochub.welcome"            
-            };
-                    
+            };      
         )
