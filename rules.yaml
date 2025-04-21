@@ -3,19 +3,70 @@ rules:
     my_rules:
       title: Мои проверки
     my_rules.main_page: 
-      title: "welcome page"
+      title: "Welcome page"
       description: "Проверка welcome page"      
       source: >
         (
-            debugger;
+            /*debugger;*/
+            $manifest := $;
             $matcher := /dochub.welcome/; /*Задаем параметр фильтрации запроса*/
-            $test1 := $count($.docs.$sift(function($v, $k) {$k ~> $matcher}).$spread().{"count": 1}) != 1
-            ? {
+            [$not([$manifest.docs.$sift(function($v, $k) {$k ~> $matcher}).$spread().{"count": 1}]) ? {
               "uid": "$dh-mm-nfwp",
               "title": "Не найден документа главной страницы",
               "description": "Не найден документа главной страницы",
               "correction": "Подключите свою главную страницу в соответствии с инструкцией описанной при входе",
               "location": "@document/dochub.welcome",
-              "path": "/docs/dochub.welcome"            
-            };      
+              "path": "/docs/dochub.welcome"  
+            }];   
+        )
+    my_rules.systems_check: 
+      title: "Systems check"
+      description: "Проверка наличия систем"
+      source: >
+        (
+           $manifest := $;
+           $systems := $manifest.components.$sift(function($v) { $v.entity="system" });
+           [$not([$systems]) ? {
+              "uid": "$dh-mm-nfs",
+              "title": "Нет ни одной системы",
+              "description": "Не найдено ни одной описанной информационной системы",
+              "correction": "Опишите свои системы в соответствии с инструкцией",
+              "location": "@component",
+              "path": "/components"  
+            }];
+        )
+
+    my_rules.swagger_check: 
+      title: "Swagger check"
+      description: "Проверка наличия контрактов swagger"
+      source: >
+        (
+            $manifest := $;	
+            $value := "openapi"; 	
+            [$not([docs.$filter($.*, function($v, $i, $a) {$contains($v."type", $value)}).($)]) ? {
+               "uid": "$dh-mm-nfapi",
+               "title": "Нет ни одного контракта swagger",
+               "description": "Не найдено ни одного описанного контракта swagger",
+               "correction": "Опишите свои контракты swagger в соответствии с инструкцией",
+               "location": "@document",
+               "path": "/docs"  
+            }];        
+        )
+
+    my_rules.bpmn_check: 
+      title: "BPMN check"
+      description: "Проверка наличия описания бизнес-процессов"
+      source: >
+        (
+            /*debugger;*/
+            $manifest := $;	
+            $value := "bpmnjs"; 	
+            [$not([docs.$filter($.*, function($v, $i, $a) {$contains($v."type", $value)}).($)]) ? {
+               "uid": "$dh-mm-nfbp",
+               "title": "Нет ни одного описанного БП",
+               "description": "Не найдено ни одного описанного бизнес-процесса",
+               "correction": "Опишите свои бизнес-процессы в соответствии с инструкцией",
+               "location": "@document",
+               "path": "/docs"  
+            }];
         )
