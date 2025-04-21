@@ -14,6 +14,11 @@ docs:
     source: my_content/auto-1745164973029-6769.yaml
     location: /Документы/Test Open API
     title: Test Open API
+  doc1745256217083:
+    type: excalidraw
+    source: my_content/auto-1745256217040-2939.excalidraw
+    location: /Документы/Новый документ 1745256217083
+    title: Новый документ 1745256217083
 
 components:
   swamp.bu_frogs.healthy_body:
