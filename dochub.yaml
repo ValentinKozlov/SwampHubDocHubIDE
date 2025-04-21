@@ -17,12 +17,12 @@ $repo:
       code: "my_code.yaml"
       content: "my_content"
 
-# docs:
-#   # Декларация стартового документа с системным идентификатором
-#   dochub.welcome:
-#     type: markdown
-#     location: /Главная страница
-#     source: main_page.md
+docs:
+  # Декларация стартового документа с системным идентификатором
+  dochub.welcome:
+    type: markdown
+    location: /Главная страница
+    source: main_page.md
 
 
 

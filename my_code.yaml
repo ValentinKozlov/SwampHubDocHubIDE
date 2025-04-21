@@ -1,25 +1,25 @@
 docs:
-  # doc1745059036581:
-  #   type: bpmnjs
-  #   source: my_content/auto-1745059036534-3287.bpmn
-  #   location: /Документы/Test BPMN
-  #   title: Test BPMN
+  doc1745059036581:
+    type: bpmnjs
+    source: my_content/auto-1745059036534-3287.bpmn
+    location: /Документы/Test BPMN
+    title: Test BPMN
   doc1745059314548:
     type: drawio
     source: my_content/auto-1745059314524-2452.drawio
     location: /Документы/test draw.io
     title: test draw.io
-  # doc1745164973073:
-  #   type: openapi
-  #   source: my_content/auto-1745164973029-6769.yaml
-  #   location: /Документы/Test Open API
-  #   title: Test Open API
+  doc1745164973073:
+    type: openapi
+    source: my_content/auto-1745164973029-6769.yaml
+    location: /Документы/Test Open API
+    title: Test Open API
 
-# components:
-#   swamp.bu_frogs.healthy_body:
-#     title: Забота о теле
-#     entity: system
-#     system_status: production
-#     dev_model: inhouse
-#     short_description: Сервис Забота о теле
-#     description: Сервис автоматизирующий за телом, путем нанесения на тело всякой гадости
+components:
+  swamp.bu_frogs.healthy_body:
+    title: Забота о теле
+    entity: system
+    system_status: production
+    dev_model: inhouse
+    short_description: Сервис Забота о теле
+    description: Сервис автоматизирующий за телом, путем нанесения на тело всякой гадости

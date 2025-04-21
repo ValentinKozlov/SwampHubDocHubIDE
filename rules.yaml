@@ -57,7 +57,7 @@ rules:
       title: "BPMN check"
       description: "Проверка наличия описания бизнес-процессов"
       source: >
-        (
+        (            
             /*debugger;*/
             $manifest := $;	
             $value := "bpmnjs"; 	
