@@ -17,8 +17,8 @@ docs:
   doc1745256217083:
     type: excalidraw
     source: my_content/auto-1745256217040-2939.excalidraw
-    location: /Документы/Новый документ 1745256217083
-    title: Новый документ 1745256217083
+    location: /Документы/Тест excalidraw
+    title: Тест excalidraw
 
 components:
   swamp.bu_frogs.healthy_body:
