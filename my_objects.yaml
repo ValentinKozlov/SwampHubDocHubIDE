@@ -1,0 +1,51 @@
+components:
+  frontend: # Фротэнд
+    title: "Frontend"
+    entity: "component"
+    links:
+      - id: backend
+        direction: "<--"
+        title: "Данные пользователя"
+      - id: auth_service
+        direction: "<--"
+        title: "Авторизация"
+
+  backend: # Бэкенд
+    title: "Backend"
+    entity: "component"
+    links:
+      - id: frontend
+        direction: "-->"
+        title: "Данные пользователя"
+      - id: auth_service
+        direction: "<--"
+        title: "Проверка авторизации"
+      - id: logging_service
+        direction: "-->"
+        title: "Логи"
+
+  auth_service: # Сервис авторизации
+    title: "Authorization Service"
+    entity: "component"
+    links:
+      - id: frontend
+        direction: "-->"
+        title: "Статус авторизации"
+      - id: backend
+        direction: "-->"
+        title: "Проверка авторизации"
+
+  logging_service: # Сервис логирования
+    title: "Logging Service"
+    entity: "component"
+    links:
+      - id: backend
+        direction: "<--"
+        title: "Логи"
+
+  admin_panel: # Админка
+    title: "Admin Panel"
+    entity: "component"
+
+
+
