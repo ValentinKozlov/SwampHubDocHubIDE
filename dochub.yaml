@@ -14,5 +14,6 @@ docs:
     title: "Repo Rules"
     location: "Правила работы с репозиторием"
     type: "markdown"
+    toc: false
     source: "repo_rules.md"
 
