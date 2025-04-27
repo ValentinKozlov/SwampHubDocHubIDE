@@ -1,0 +1,18 @@
+dochuber: 
+  contexts: 
+    global: 
+      dochub.components: 
+        type: dataset
+        source: >
+          (
+            $manifest := $;
+            $components := $manifest.components;            
+            $dochuber_context := $components.$spread().(
+              $component := $.*;
+              "Компонент архитектурного репозитория: " & $component.title & " имеет связи со следующими компонентами:
+              " & ($component.links.($lookup($components, $.id).title)~>$join('; '))
+            );
+            $dochuber_context := "Ниже указан список компонент описывающих архитектурное решение текущего репозитория: 
+            " & $dochuber_context & "
+            Общее количество описанных архитектурных компонент: " & $count($dochuber_context);
+          )

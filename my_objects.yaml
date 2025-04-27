@@ -1,51 +1,61 @@
 components:
-  frontend: # Фротэнд
+  dochub.frontend: # Фротэнд
     title: "Frontend"
     entity: "component"
     links:
-      - id: backend
+      - id: dochub.backend
         direction: "<--"
         title: "Данные пользователя"
-      - id: auth_service
+      - id: dochub.auth_service
         direction: "<--"
         title: "Авторизация"
 
-  backend: # Бэкенд
+  dochub.backend: # Бэкенд
     title: "Backend"
     entity: "component"
     links:
-      - id: frontend
+      - id: dochub.frontend
         direction: "-->"
         title: "Данные пользователя"
-      - id: auth_service
+      - id: dochub.auth_service
         direction: "<--"
         title: "Проверка авторизации"
-      - id: logging_service
+      - id: dochub.logging_service
         direction: "-->"
         title: "Логи"
 
-  auth_service: # Сервис авторизации
+  dochub.auth_service: # Сервис авторизации
     title: "Authorization Service"
     entity: "component"
     links:
-      - id: frontend
+      - id: dochub.frontend
         direction: "-->"
         title: "Статус авторизации"
-      - id: backend
+      - id: dochub.backend
         direction: "-->"
         title: "Проверка авторизации"
 
-  logging_service: # Сервис логирования
+  dochub.logging_service: # Сервис логирования
     title: "Logging Service"
     entity: "component"
     links:
-      - id: backend
+      - id: dochub.backend
         direction: "<--"
         title: "Логи"
 
-  admin_panel: # Админка
+  dochub.admin_panel: # Админка
     title: "Admin Panel"
     entity: "component"
+    links:
+      - id: dochub.backend
+        direction: "-->"
+        title: "Настройка"
 
 
+contexts:
+  system_overview:
+    title: "Общая архитектура системы"
+    location: "Пример контекста" # Добавлен вывод контекста в меню в раздел Архитектура
+    components:
+      dochub.*
 
