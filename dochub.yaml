@@ -10,3 +10,13 @@ imports:
   - https://alpha.dochub.info/archcode/_metamodel_/ceaf-app/dochub.yaml
   # Базовая документация по DocHubIDE
   # - https://alpha.dochub.info/archcode/dochub.yaml
+  # Подключаем файл с контекстами для AI-ассистента
+  - dochuber.yaml
+
+docs:
+  docs.tdr_overview:
+    location: /Документы/Управление архитектурными решениями
+    title: "Управление архитектурными решениями"
+    description: "Документ об управлении архитектурными решениями, включая ADR, ADL и TDR"
+    type: markdown
+    source: /docs/tdr_overview.md

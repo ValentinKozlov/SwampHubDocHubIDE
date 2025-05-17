@@ -1,0 +1,25 @@
+dochuber: 
+  contexts: 
+    global: 
+      dochub.docs: 
+        type: resource
+        description: Подключаем документацию DocHub
+        source: https://alpha.dochub.info/archcode/_metamodel_/dochub-manual/dochub.yaml
+
+  knowledge:
+    dochub.tdr_overview:      
+      type: resource
+      description: >
+        Знание содержит как управлять архитектурными решениями в DocHub используя Transformation Decision Record (TDR), а именно:
+        1. Что такое ADR и ADL
+        2. Почему классический ADR не подходит
+        3. Что такое TDR
+        4. Процесс TDR
+        5. Преимущества TDR
+      source: docs/tdr_overview.md
+
+    dochub.tdr_guide:      
+      type: resource
+      description: Знание содержит инструкция для AI-ассистента по созданию и заполнению документа tdr
+      source: promts/tdr_promt.md
+      
